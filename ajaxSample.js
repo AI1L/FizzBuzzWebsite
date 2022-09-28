@@ -1,6 +1,6 @@
 function get(url) {
     return new Promise((resolve, reject) => {
-      const http = new XMLHttpRequest({mozSystem: true});
+      const http = new XMLHttpRequest();
       http.onload = function() {
         resolve({ status: http.status, data: JSON.parse(http.response) });
       };
@@ -13,7 +13,7 @@ function get(url) {
 function post(url, data) {
     data = JSON.stringify(data);
     return new Promise((resolve, reject) => {
-      const http = new XMLHttpRequest({mozSystem: true});
+      const http = new XMLHttpRequest();
       http.onload = function() {
         resolve({ status: http.status, data: JSON.parse(http.response) });
       };
