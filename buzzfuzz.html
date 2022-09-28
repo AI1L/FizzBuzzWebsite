@@ -37,7 +37,7 @@
         function increase(){//this function runs on click and increases the value.
           score++;//increases the score value.
           dataToSend = {"score": score};//JSON data for post method
-          post("https://basic-web.dev.avc.web.usf.edu/"+username, dataToSend);//post method to update the score of the user.
+          post("http://basic-web.dev.avc.web.usf.edu/"+username, dataToSend);//post method to update the score of the user.
           printValue(score);//finally updates and prints the increased score.
         }
       </script>
